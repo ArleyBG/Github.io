@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="app/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <div class="menu">
         <ul>
             <li><a href="index.html">INICIO</a></li>
-            <li><a href="about.html">SOBRE MÍ</a></li>
+            <li><a href="#sobre-mi">SOBRE MÍ</a></li>
             <li><a href="contact.html">SKILLS</a></li>
             <li><a href="contact.html">CURRICULUM</a></li>
             <li><a href="contact.html">PORTAFOLIO</a></li>
@@ -24,15 +24,28 @@
     </div> 
 </header>
 <body>
-    <div class="container">
-        <img src="css/img.png" alt="" width="250px" height="250px">
-        <h3>Arley Benavides</h3>
-        <p>Software Developer</p>
-        <ul>
-            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin fa-bounce"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-        </ul>
+    <div class="fondo">
+        <div class="container">
+            <img src="app/css/img1.png" alt="" width="250px" height="250px">
+            <h3>Arley Benavides</h3>
+            <p>Software Developer</p>
+            <ul>
+                <li><a href="https://github.com/ArleyBG"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/arley-benavides-giraldo"><i class="fa-brands fa-linkedin fa-bounce"></i></a></li>
+                <li><a href="https://www.instagram.com/arley_benavides_g/profilecard/?igsh=eHlxZXRyNHFqcDV3"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
     </div>
+
+    <section class="hidden" id="sobre-mi">
+        <div class="content">
+            <h3>SOBRE MÍ</h3>
+            <br>
+            <p><span>Hola, soy Arley Benavides Giraldo.</span> Desarrollador de software con experiencia en el desarrollo de aplicaciones web y móviles. Conocimientos en lenguajes de programación como Java, JavaScript, PHP, Python, C#, entre otros. Experiencia en el uso de frameworks como Angular, React, Django, entre otros. Experiencia en el uso de bases de datos relacionales y no relacionales. Experiencia en el uso de herramientas de control de versiones como Git. Experiencia en el uso de metodologías ágiles como Scrum. Experiencia en el uso de herramientas de diseño como Adobe XD, Figma, entre otros.</p>
+            <br>
+            <p>Mi pasión por el aprendizaje continuo y la resolución de problemas me ha llevado a participar en diversos proyectos que me han permitido desarrollar habilidades técnicas y blandas. Siempre estoy en busca de nuevos desafíos y oportunidades para seguir creciendo profesionalmente.</p>
+        </div>
+    </section>
+<script type="module" src="app/js/views.js"></script>
 </body>
 </html>
