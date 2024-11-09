@@ -25,6 +25,32 @@ header {
     font-weight: 700;
     font-style: normal;
 }
+
+.menu-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: static;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+@media (min-width: 576px) {
+    .menu-list {
+        display: flex;
+        position: static;
+        box-shadow: none;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
   
 
 .menu {
@@ -41,7 +67,8 @@ header {
     margin: 0 10px;
 }
 
-.menu ul li a {
+.menu ul li a,
+.fa-bars {
     text-decoration: none;
     color: #fff;
     font-size: 14px;
@@ -136,7 +163,6 @@ body {
     height: 100%;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 50px;
     border: 1px solid #0074D9;
     opacity: 0.8;
     border-radius: 15px;
@@ -145,8 +171,8 @@ body {
 
 section {
     background-color: #1e2125;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 span {
@@ -181,4 +207,127 @@ span {
     opacity: 0;
 }
 
+.content li {
+    list-style: none;
+    margin: 10px;
+}
 
+.columns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.datos > ul > li > span {
+    display: inline-block;
+    width: 100px; /* Adjust the width as needed */
+    margin-right: 40px;
+}
+
+.datos > ul {
+    margin-top: 20px;
+}
+
+.datos > ul > li {
+    display: flex;
+}
+
+.intereses h3,
+.datos h3 {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.intereses > ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.intereses > ul > li {
+    list-style: none;
+    background-color: #0074D9;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.intereses > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.fa-headphones,
+.fa-dumbbell,
+.fa-book-open-reader,
+.fa-laptop {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.cv-download {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: width 1s ease-in-out;
+}
+
+.btn-download:hover::before {
+    width: 100%;
+}
+
+.btn-download {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.fa-download {
+    margin-left: 5px;
+}
+
+.skills h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 200px;
+    font-family: "Oleo Script", system-ui;
+    font-style: normal;
+    font-size: 27px;
+    color: #fff;
+}

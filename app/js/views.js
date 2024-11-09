@@ -10,3 +10,10 @@ document.addEventListener('scroll', function() {
         section.classList.add('hidden');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
+    });
+});
