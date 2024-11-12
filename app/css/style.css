@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+/* -------------- HEADER -------------- */
+
 header {
     display: flex;
     justify-content: space-around; /* horizontal center */
     background: #181b1d;
     height: 80px;
     align-items: center; /* vertical center */
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header en la parte superior */
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
 
 .oleo-script-regular {
@@ -81,19 +87,26 @@ header {
     transition: all 0.3s;
 }
 
+/* -------------- INICIO -------------- */
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: work sans, sans-serif;
     color: #fff;
     background: #24292e; 
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    padding-top: 70px; /* Asegura que el contenido no se superponga con el encabezado */
+    height: 100%;
 }
+
 
 .fondo {
     position: relative;
     background-image: url('fondo1.png');
     background-size: cover;
     background-position: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0.5, 0.5, 0.5, 0.8);
+    padding-top: 20px;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana gráfica */
+    width: 100%;
     opacity: 10;
 }
 
@@ -111,19 +124,14 @@ body {
 .container {
     position: relative;
     z-index: 2;
-}
-
-.container {
     width: 350px;
-    height: 100%;
+    height: 75%;
     align-items: center;
     margin: 0 auto;
-    margin-bottom: 130px;
+    margin-top: 50px;
     border: 1px solid #0074D9;
     opacity: 0.8;
     border-radius: 50px;
-    padding-top: 40px;
-    padding-bottom: 50px;
 }
 
 .container h3,
@@ -158,6 +166,8 @@ body {
     margin-bottom: 30px;
 }
 
+/* -------------- SOBRE MI -------------- */
+
 .content {
     display: flex;
     flex-direction: column;
@@ -171,7 +181,8 @@ body {
     padding: 30px;
 }
 
-section {
+#sobre-mi,
+#curriculum {
     background-color: #1e2125;
     padding-top: 70px;
     padding-bottom: 70px;
@@ -190,6 +201,11 @@ span {
     font-style: normal;
     font-size: 27px;
     color: #fff;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 20px;
 }
 
 @keyframes slideUp {
@@ -323,13 +339,118 @@ span {
     margin-left: 5px;
 }
 
+.ocupacion {
+    padding: 5px;
+    background-color: #1CB698;
+    border-radius: 3px;
+}
+
+
+/* -------------- SKILLS -------------- */
+
+.columna {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 30px;
+    border: 1px solid #1CB698;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
 .skills h3 {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    height: 200px;
     font-family: "Oleo Script", system-ui;
     font-style: normal;
     font-size: 27px;
     color: #fff;
+    margin-bottom: 30px;
+}
+
+.skills > p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.icons h4 {
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons > li {
+    list-style: none;
+    margin: 15px;
+}
+
+.profesionales > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.profesionales > ul > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profesionales {
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.profesionales h4 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.progress {
+    background-color: #0074D9;
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* -------------- CURRICULUM -------------- */
+
+.curriculum {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    padding: 30px;
+    border: 1px solid #fff;
+    opacity: 0.8;
+    border-radius: 15px;
 }
