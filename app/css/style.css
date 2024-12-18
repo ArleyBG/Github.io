@@ -241,7 +241,7 @@ span {
 
 .datos > ul > li > span {
     display: inline-block;
-    width: 100px; /* Adjust the width as needed */
+    width: 100px;
     margin-right: 40px;
 }
 
@@ -251,6 +251,7 @@ span {
 
 .datos > ul > li {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .intereses h3,
