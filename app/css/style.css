@@ -274,6 +274,7 @@ span {
 }
 
 .intereses > ul > li {
+    flex-grow: 1;
     list-style: none;
     background-color: #0074D9;
     border-radius: 10px;
